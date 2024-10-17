@@ -13,9 +13,7 @@ const MainContent = () => {
     return (
         <div className="main-product-list">
             {ecommerceData.map((element)=> (
-                <Link to={`/item/${element.id}`}>
                     <ProductCard key = {element.id} {...element} onDelete = {deleteProduct}/>
-                </Link>
             ))}
         </div>
     );

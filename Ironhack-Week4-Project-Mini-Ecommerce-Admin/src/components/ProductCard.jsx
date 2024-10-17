@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ProductCard ({id, title, description, price, discountPercentage, rating, stock, brand, category, thumbnail, images, onDelete}) {
     return (
@@ -7,7 +8,9 @@ function ProductCard ({id, title, description, price, discountPercentage, rating
                 <img className="productcard-thumbnail" src={thumbnail} alt={title} />
             </div>
             <div className ="productcard-general-info-container">
-                <h3>Title: {title}</h3>
+                <Link to={`/item/${id}`}>   
+                    <h3>Title: {title}</h3>
+                </Link>
                 <p>Description: {description}</p>
                 <p>Price: ${price}</p>
                 <p>Discount: {discountPercentage}%</p>

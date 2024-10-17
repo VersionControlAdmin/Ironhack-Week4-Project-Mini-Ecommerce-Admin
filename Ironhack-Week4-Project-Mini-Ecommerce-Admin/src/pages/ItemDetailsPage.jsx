@@ -9,9 +9,9 @@ function ItemDetailsPage(props) {
     console.log(foundItem);
     const {id, title, description, price, discountPercentage, rating, stock, brand, category, thumbnail, images} = foundItem;
     return (
-        <div>
+        <div className = "item-details-container">
             <h1>{title}</h1>
-            <img src={thumbnail} alt={title} />
+            <img src={thumbnail} alt={title} className = "item-details-page-thumbnail"/>
             <p><strong>Description:</strong> {description}</p>
             <p><strong>Price:</strong> ${price}</p>
             <p><strong>Discount Percentage:</strong> {discountPercentage}%</p>
